@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #CBB799 50%, #F5F5DC 50%);
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+    font-family: 'Handlee', cursive;
+    overflow-y: hidden;
+}
+
+#generalDiv {
+    display: flex;
+    height: 100%; }
+
+.container {
+    flex: 1.2; 
+    background: #CBB799; 
+    color: #fff; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+
+
+#TareasContainer {
+    flex: 1; 
+    background-color: #F5F5DC; 
+    color: #fff; 
+    /*flex*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #3D211A;
+}
+
+input[type="text"] {
+    width: 50%;
+    height: 20px;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 0px solid #F5F5DC;
+    background-color: #F5F5DC;
+    font-family: 'Handlee', cursive;
+    color: #3d211a;
+    font-weight: bold;
+}
+
+input[type="text"]:focus{
+    outline: none;
+}
+
+
+button {
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: #3d211ae6;
+    color: #F5F5DC;
+    font-family: 'Handlee', cursive;
+}
+
+button:focus{
+    outline: none
+}
+
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 0px solid #ddd;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    background-color: #f5f5dc;
+    height: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo básico del checkbox */
+.checkbox-container input[type="checkbox"] {
+    appearance: none; /* Oculta el estilo predeterminado del navegador */
+    width: 20px;
+    height: 20px;
+    border: 0px solid #CBB799;
+    border-radius: 50%;
+    background: #CBB799; /* Fondo por defecto */
+    cursor: pointer;
+    position: relative;
+    vertical-align: middle; /* Alinea el checkbox verticalmente con el texto */
+    display: inline-block;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Fondo al pasar el mouse */
+.checkbox-container input[type="checkbox"]:hover {
+    background-color: #CBB799; /* Fondo claro en hover */
+    border-color: #CBB799;
+}
+
+/* Fondo cuando está seleccionado */
+.checkbox-container input[type="checkbox"]:checked {
+    background-color: #3d211ae6; /* Fondo al seleccionarse */
+    border-color: #3d211ae6; /* Cambia el borde también */
+}
+
+/* Opcional: ícono de check al seleccionarse */
+.checkbox-container input[type="checkbox"]:checked::after {
+    content: '✔'; /* Ícono de check */
+    color: white; /* Color del ícono */
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    line-height: 20px; /* Centra verticalmente */
+}
+
+.task-info {
+    flex-grow: 1;
+}
+
+.task-name {
+    font-size: 16px;
+    color: #3d211a;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.task-icon {
+    color: #3d211ae6;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.task-icon:hover {
+    color: darkred;
+}
+
+#completedTasksContainer {
+    max-height: 845px; 
+    overflow-y: auto; 
+    border: 0px solid #ddd; 
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #F5F5DC; 
+    transition: background-color 0.3s ease; 
+}
+
+
+
+#completedTasksContainer::-webkit-scrollbar {
+    width: 10px;
+}
+
+#completedTasksContainer::-webkit-scrollbar-thumb {
+    background: #3d211ae6;
+    border-radius: 5px;
+}
+
